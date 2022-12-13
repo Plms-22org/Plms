@@ -1,0 +1,8 @@
+[MainConfiguration]
+publisher = Oracle
+mirror = ""
+language = English
+install_path = C:\Program Files\Plvmes
+app_install_path = C:\Program Files\Plvmes\installed
+cache_path = C:\Program Files\Plvmes\cache
+config_path = C:\Users\Administrator\AppData\Local\Plvmes\config\.Plvmes\config\Plvmes-config.ini

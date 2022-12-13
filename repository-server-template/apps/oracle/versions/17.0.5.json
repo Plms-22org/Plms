@@ -1,0 +1,79 @@
+[
+  {
+    "version": "17.0.5",
+    "os": "Windows",
+    "arch": "x64",
+    "dist": "zip",
+    "checksum": {
+      "algo": "sha256",
+      "content": "6919e8cb39d041e115d69340b2fbce1f817c3664fe121cb41af5ce2b180db2cc"
+    },
+    "url": "https://download.oracle.com/java/17/latest/jdk-17_windows-x64_bin.zip"
+  },
+  {
+    "version": "17.0.5",
+    "os": "Windows",
+    "arch": "x64",
+    "dist": "exe",
+    "checksum": {
+      "algo": "sha256",
+      "content": "6f5f3ff459f4f5a35866622b2de6638c16eaad7d52c89a31d846a435bda39621"
+    },
+    "url": "https://download.oracle.com/java/17/latest/jdk-17_windows-x64_bin.exe"
+  },
+  {
+    "version": "17.0.5",
+    "os": "Windows",
+    "arch": "x64",
+    "dist": "msi",
+    "checksum": {
+      "algo": "sha256",
+      "content": "5285a3cb213574c9383dd43c2e9dfe5cb19d48965fb5e00590ee2429ea32180a"
+    },
+    "url": "https://download.oracle.com/java/17/latest/jdk-17_windows-x64_bin.msi"
+  },
+  {
+    "version": "17.0.5",
+    "os": "macOS",
+    "arch": "arm64",
+    "dist": "tar.gz",
+    "checksum": {
+      "algo": "sha256",
+      "content": "73d2bc6f3527061e602d42870a5b51f4a730e2553877abada887bc20b4d80781"
+    },
+    "url": "https://download.oracle.com/java/17/latest/jdk-17_macos-aarch64_bin.tar.gz"
+  },
+  {
+    "version": "17.0.5",
+    "os": "macOS",
+    "arch": "arm64",
+    "dist": "dmg",
+    "checksum": {
+      "algo": "sha256",
+      "content": "d8287683dc363640695498d470907923292a75ee453ef46be3b25a1a2fef148a"
+    },
+    "url": "https://download.oracle.com/java/17/latest/jdk-17_macos-aarch64_bin.dmg"
+  },
+  {
+    "version": "17.0.5",
+    "os": "macOS",
+    "arch": "x64",
+    "dist": "tar.gz",
+    "checksum": {
+      "algo": "sha256",
+      "content": "2b3f7aeef5d568e751cf0bb50c28eede4285b3cb5d15479c6a937f589469742d"
+    },
+    "url": "https://download.oracle.com/java/17/latest/jdk-17_macos-x64_bin.tar.gz"
+  },
+  {
+    "version": "17.0.5",
+    "os": "macOS",
+    "arch": "x64",
+    "dist": "dmg",
+    "checksum": {
+      "algo": "sha256",
+      "content": "0dcea5aab0ea8ca2810a114f5fab5c145c9bc0af97462fe0016ddd397aff7016"
+    },
+    "url": "https://download.oracle.com/java/17/latest/jdk-17_macos-x64_bin.dmg"
+  }
+]
