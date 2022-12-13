@@ -10,6 +10,7 @@ from libcore.utill.system_information import SystemInformation
 
 
 class Config:
+    __version = None
     __default_config = None
     __default_mirror = None
     __default_language = "en_US"
@@ -92,9 +93,9 @@ class Config:
             return False
             # raise FileDoesNotExist("The configuration file does not exist!")
 
-    def get_path(self):
+    def init_path(self):
         """
-        重置各种安装路径。
+        初始化各种安装路径。
         :return:
         """
         if self.__load_config_file() is False:
