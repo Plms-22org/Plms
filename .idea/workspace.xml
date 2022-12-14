@@ -7,10 +7,13 @@
     <list default="true" id="3ee204a1-42aa-4ded-a4d5-8a50229cdb63" name="变更" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Plms.py" beforeDir="false" afterPath="$PROJECT_DIR$/Plms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libcore/command/use.py" beforeDir="false" afterPath="$PROJECT_DIR$/libcore/command/use.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/.Plms-confing.ini.template" beforeDir="false" afterPath="$PROJECT_DIR$/assets/.Plms-confing.ini.template" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/libcore/config/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/libcore/config/config.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libcore/install/macOS.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libcore/install/linux.py" beforeDir="false" afterPath="$PROJECT_DIR$/libcore/install/linux.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/libcore/utill/downloader.py" beforeDir="false" afterPath="$PROJECT_DIR$/libcore/utill/downloader.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libcore/utill/file_verifier.py" beforeDir="false" afterPath="$PROJECT_DIR$/libcore/utill/file_verifier.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libcore/utill/json_parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/libcore/utill/json_parser.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libcore/utill/system_information.py" beforeDir="false" afterPath="$PROJECT_DIR$/libcore/utill/system_information.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,8 +23,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="Apache-2.0" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -74,6 +77,8 @@
       <workItem from="1670938967880" duration="551000" />
       <workItem from="1670940812471" duration="95000" />
       <workItem from="1670941070120" duration="6663000" />
+      <workItem from="1670985738702" duration="11757000" />
+      <workItem from="1671017605894" duration="18004000" />
     </task>
     <servers />
   </component>
@@ -92,7 +97,7 @@
     </option>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Plms$Plms.coverage" NAME="Plms 覆盖结果" MODIFIED="1670944726446" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Plms$downloader.coverage" NAME="downloader 覆盖结果" MODIFIED="1670938182506" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/libcore/utill" />
+    <SUITE FILE_PATH="coverage/Plms$Plms.coverage" NAME="Plms 覆盖结果" MODIFIED="1671038557580" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Plms$downloader.coverage" NAME="downloader 覆盖结果" MODIFIED="1671027577017" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/libcore/utill" />
   </component>
 </project>

@@ -41,7 +41,7 @@ class SystemInformation:
             raise GetSystemInfoException("Failed to get system user!")
 
         if self.__System == "Windows":
-            self.__now_user_path = os.path.expandvars('$HOMEPATH').strip()  # windows python3.8 以上使用本参数
+            self.__now_user_path = os.path.expandvars('$HOMEPATH').strip()  # windows python3.8 以上使用本参数获取用户路径
             self.__now_system_Root = os.getenv("SystemDrive", default="C:").strip()  # 获取windows操作系统盘符
             if FileIsEmpty.is_empty(self.__now_system_Root):
                 raise GetSystemInfoException("Illegal system path: {}!".format(self.__now_system_Root))

@@ -1,6 +1,6 @@
 [MainConfiguration]
 publisher = Oracle
-mirror = ""
+mirror = "path"
 language = English
 install_path = C:\Program Files\Plvmes
 app_install_path = C:\Program Files\Plvmes\installed

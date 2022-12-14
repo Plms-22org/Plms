@@ -110,6 +110,9 @@ class Config:
             return self.__default_language
 
     def key_check(self, key: str):
+        """
+        检查输入的 key 是否正常。
+        """
         if FileIsEmpty.is_empty(key):
             raise ConfigKeyNot_ExistException("{} is not in config file, because key is empty!".format(key))
 
