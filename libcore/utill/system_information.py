@@ -23,6 +23,7 @@ class SystemInformation:
 
     def __init__(self):
         self.__System_architecture = None  # 保存操作系统的架构信息
+        self.__computer_name = None # 保存计算机名
         self.__System = None  # 保存操作系统名
         self.__now_user = None  # 保存当前用户名
         self.__now_user_path = None  # 保存当前 home目录
@@ -33,6 +34,7 @@ class SystemInformation:
         本方法用于获取当前系统信息。
         :return:  None
         """
+        self.__computer_name = platform.node()
         self.__System = platform.system()  # 得出操作系统名称
         self.__System_architecture = self.System_architecture_information_correction[platform.machine()]  # 得到操作系统的架构
         self.__now_user_path = getpass.getuser()  # 获取当前用户
@@ -83,6 +85,11 @@ class SystemInformation:
         """
         return self.__now_system_Root
 
+    def now_computer_name(self):
+        """
+        获取当前计算机机器的主机名
+        """
+        return self.__computer_name
 
 if __name__ == "__main__":
     pass
