@@ -7,59 +7,55 @@ import winreg
 from os.path import join
 
 from libcore.config.config import Config
+from libcore.utill.plms_rar import PlmsRAR
+from libcore.utill.downloader import Download
 from libcore.utill.system_information import SystemInformation
 
 
 class USE:
 
-    def __str__(self):
-        pass
-
-    def java_use(self):
+    @staticmethod
+    def use_java_for_windows(filename=str):
         """
-
+        切换java版本
         """
+        config = Config()
+        DD = Download()
 
+        config.init_path()
+        app_install_path = config.get_app_install_path()
+        print(app_install_path)
         if ctypes.windll.shell32.IsUserAnAdmin() == 1:  # 检查当前系统用户是否具备 Root 权限
             var = os.environ['PATH'].split(";")
-            JAVA_HOME = "C:\Program Files\Plms\installed\jdk-17.0.5"
 
-            if var[-1] == JAVA_HOME:
-                print("无需重复设置同版本的jdk!")         # 这里抛异常
+            if var[-1] == filename:
+                print("无需重复设置同版本的jdk!")  # 这里抛异常
+            else:
+                tmp = []
+                for acc in var:
+                    pattern_1 = r"jdk-"
+                    pattern_2 = r"\\java\\"
+                    if re.search(pattern_1, acc) or re.search(pattern_2, acc) is None:
+                        tmp.append(acc)
 
-            tmp = []
-            for acc in var:
-                pattern_1 = r"jdk-"
-                pattern_2 = r"\\java\\"
-                if re.search(pattern_1, acc) or re.search(pattern_2, acc) is None:
-                    tmp.append(acc)
+                filepath = config.get_app_install_path()
+                JAVA_HOME = filepath + "\\" + filename
+                PATH = ";".join(tmp)
+                aa = os.system("wmic ENVIRONMENT where \"name='JAVA_HOME'\" delete")
 
-            PATH = ";".join(tmp)
+                bb = os.system(
+                    f"wmic ENVIRONMENT create name=\"JAVA_HOME\","
+                    f"username=\"<system>\", VariableValue= \"{JAVA_HOME}\""
+                )
 
-            os.system("wmic ENVIRONMENT where \"name='JAVA_HOME'\" delete")
-
-            os.system(
-                f"wmic ENVIRONMENT create name=\"JAVA_HOME\","
-                f"username=\"<system>\", VariableValue= \"{JAVA_HOME}\""
-            )
-
-            os.system(
-                f"wmic ENVIRONMENT where \"name='Path' and username='<system>'\" "
-                f"set VariableValue= \"{PATH};{JAVA_HOME}\\bin\""
-            )
+                cc = os.system(
+                    f"wmic ENVIRONMENT where \"name='Path' and username='<system>'\" "
+                    f"set VariableValue= \"{PATH};{JAVA_HOME}\\bin\""
+                )
 
         else:
             pass
 
-            # for url_tar_gz in self.__download_path:
-            #     pattern = r".tar.gz"
-            #     if re.search(pattern, url_tar_gz):  # 如果目标url以.tar.gz结尾，则将其复制给变量__url，以便调用下载.
-            #         urllib.request.urlretrieve(url_tar_gz, self.__install_path + "\\Java.tar.gz")
-
-        pass
-
 
 if __name__ == "__main__":
-    DD = use()
-    DD.java_use()
     pass

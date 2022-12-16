@@ -6,9 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="3ee204a1-42aa-4ded-a4d5-8a50229cdb63" name="变更" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Plms.py" beforeDir="false" afterPath="$PROJECT_DIR$/Plms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/libcore/command/use.py" beforeDir="false" afterPath="$PROJECT_DIR$/libcore/command/use.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libcore/utill/system_information.py" beforeDir="false" afterPath="$PROJECT_DIR$/libcore/utill/system_information.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libcore/utill/downloader.py" beforeDir="false" afterPath="$PROJECT_DIR$/libcore/utill/downloader.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,6 +76,8 @@
       <workItem from="1671067290411" duration="15757000" />
       <workItem from="1671105185344" duration="11383000" />
       <workItem from="1671118048355" duration="989000" />
+      <workItem from="1671155672295" duration="67000" />
+      <workItem from="1671156043703" duration="9221000" />
     </task>
     <servers />
   </component>
@@ -96,7 +97,7 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Plms$use.coverage" NAME="use 覆盖结果" MODIFIED="1671118331485" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/libcore/command" />
-    <SUITE FILE_PATH="coverage/Plms$Plms.coverage" NAME="Plms 覆盖结果" MODIFIED="1671118526810" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Plms$Plms.coverage" NAME="Plms 覆盖结果" MODIFIED="1671166059298" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Plms$downloader.coverage" NAME="downloader 覆盖结果" MODIFIED="1671027577017" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/libcore/utill" />
   </component>
 </project>

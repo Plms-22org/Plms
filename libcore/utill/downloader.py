@@ -10,6 +10,7 @@ from libcore.utill.json_parser import Jsonfile
 
 
 class Download(Jsonfile, Config):
+    __filename = None  # 保存压缩文件下的文件名
     __install_path = None
     __check_file_id = None  # 保存 sha256 的值
     __system = None  # 保存当前操作系统
@@ -20,7 +21,7 @@ class Download(Jsonfile, Config):
 
     def __get_variables(self):
         """
-        获得本地文件路径。
+        获得系统与文件路径信息
         :return:
         """
         self.system_information()
@@ -32,35 +33,46 @@ class Download(Jsonfile, Config):
         self.__cache_path = self.get_cache_path()  # 获取缓存路径， 来自 libcore.config.config.Config
         self.__config_path = self.get_config_path()  # 获取配置文件路径 来自 libcore.config.config.Config
 
-    def download(self):
-        pass
+    def download(self) -> str:
+        self.__get_variables()  #
 
-    def download_for_windows(self) -> str:
+        if self.__system == "Windows":
+            return self.download_for_windows()
+        elif self.__system == "Linux":
+            pass
+        elif self.__system == "Darwin":
+            pass
+
+    def download_for_windows(self, version: str = None) -> str:
         """
         从指定url下载压缩包。
         :return: None
         """
+        if True:
+            pass
+
         now_time = datetime.datetime.now()
-        self.__get_variables()
         Path_character_for_windows = "\\"
         Name_character = "-"
         Filename = "jdk"
         Filename_suffix_zip = ".zip"
         self.__local_file_path_for_windows = self.__cache_path + Path_character_for_windows + Filename \
-                                           + Name_character + self.__version + Name_character \
-                                           + now_time.strftime("%Y%m%d-%H%M%S") + Filename_suffix_zip
+                                             + Name_character + self.__version + Name_character \
+                                             + now_time.strftime("%Y%m%d-%H%M%S") + Filename_suffix_zip
 
-        if self.__system == "Windows":
-            self.All_directories_must_exist(self.__cache_path)  # 判断目录是否存在，如不存在则创建目录
-            urllib.request.urlretrieve(self.__download_path, self.__local_file_path_for_windows)
-            check_file = FileVerifier()
-            sha256_result = check_file.judge_cultural_security(file=self.__local_file_path_for_windows)
-            if sha256_result:
-                print("文件下载完成，并通过sha256校验！")
-                return self.__local_file_path_for_windows
-            else:
-                print("文件校验失败！请检查文件(path: {})".format(self.__local_file_path_for_windows))
-                return ""
+        self.All_directories_must_exist(self.__cache_path)  # 判断目录是否存在，如不存在则创建目录
+        urllib.request.urlretrieve(self.__download_path, self.__local_file_path_for_windows)
+
+        self.__filename = zipfile.ZipFile(self.__local_file_path_for_windows, 'r').namelist()[0].strip("/")  # 保存压缩文件下的文件名
+
+        check_file = FileVerifier()
+        sha256_result = check_file.judge_cultural_security(file=self.__local_file_path_for_windows)
+        if sha256_result:
+            print("文件下载完成，并通过sha256校验！")
+            return self.__local_file_path_for_windows
+        else:
+            print("文件校验失败！请检查文件(path: {})".format(self.__local_file_path_for_windows))
+            return ""
 
     def download_for_oxs(self):
         if self.__system == "macOS":
@@ -92,20 +104,14 @@ class Download(Jsonfile, Config):
         if os.path.exists(filepath) is False:
             os.makedirs(filepath)
 
-    def set_jdk_env_var(self):
-        """
-        该方法用于设置jdk环境变量。
-        :return:
-        """
-
-        # os.system("wmic ENVIRONMENT where \"name='JAVA_HOME'\" delete")
-        java_home = " "
-        os.system("set JAVA_HOME=C:\Program Files\Plms\installed\jdk-17.0.5")
-        os.system("set PATH=%JAVA_HOME%\bin")
-        pass
-
     def get_local_file_path_for_windows(self) -> str:
-        return self.local_file_path_for_windows
+        return self.__local_file_path_for_windows
+
+    def get_file_name(self):
+        """
+        获取zip压缩包下的第一个文件的文件名
+        """
+        return self.__filename
 
 
 if __name__ == "__main__":
